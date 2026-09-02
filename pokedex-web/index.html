@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex Web</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <span class="pokeball">⚪</span>
+        <h1>Pokédex Web</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">Catálogo</a>
+        <a href="reconocimiento.html" class="nav-link">Reconocimiento</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="controls">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Buscar Pokémon..." aria-label="Buscar Pokémon">
+        <button id="searchBtn" class="btn btn-primary">Buscar</button>
+      </div>
+      <div class="limit-box">
+        <label for="limitSelect">Mostrar:</label>
+        <select id="limitSelect">
+          <option value="12">12</option>
+          <option value="20" selected>20</option>
+          <option value="40">40</option>
+          <option value="60">60</option>
+        </select>
+      </div>
+    </section>
+
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+
+    <section id="pokemonGrid" class="pokemon-grid" aria-label="Catálogo de Pokémon">
+      <!-- Tarjetas generadas dinámicamente -->
+    </section>
+
+    <div class="pagination">
+      <button id="prevBtn" class="btn btn-secondary" disabled>Anterior</button>
+      <span id="pageInfo">Página 1</span>
+      <button id="nextBtn" class="btn btn-secondary">Siguiente</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Datos de <a href="https://pokeapi.co/" target="_blank" rel="noopener">PokéAPI</a> · Proyecto académico</p>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
